@@ -2,28 +2,84 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.green.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+
+    <script src="js/jquery.min.js"> </script>
+    <script src="js/owl.carousel.min.js"></script>
     <title>Document</title>
+
+
+    <!--here i have to check width and height-->
+    <style>
+        .item{
+            background-color: aqua;
+            width: 150px;
+            height: 150px;  
+            padding: 10px;
+        }
+        
+    </style>
+
 </head>
 <body>
-    <div id="title">
-        <h1 > Drum 🥁 Kit</h1>
+    <div class="container">
+         <div class="owl-carousel owl-theme">
+                <div class="item"><h4>1</h4></div>
+
+                    <!--
+                    <div class="item-box">
+                    </div>  -->
+                <div class="item"><h4>2</h4></div>
+                <div class="item"><h4>3</h4></div>
+                <div class="item"><h4>4</h4></div>
+                <div class="item"><h4>5</h4></div>
+                <div class="item"><h4>6</h4></div>
+                <div class="item"><h4>7</h4></div>
+                <div class="item"><h4>8</h4></div>
+                <div class="item"><h4>9</h4></div>
+                <div class="item"><h4>10</h4></div>
+                <div class="item"><h4>11</h4></div>
+                <div class="item"><h4>12</h4></div>
+         </div>
     </div>
-    <div class="set">
-        <button class="w drum"> w </button>
-        <button class="a drum"> a </button>
-        <button class="s drum"> s </button>
-        <button class="d drum"> d </button>
-        <button class="j drum"> j </button>
-        <button class="k drum"> k </button>
-        <button class="l drum"> l </button>
-    </div>
-    <script src="script.js" charset="utf-8"> </script>
-    <footer>
-        coded by 👨🏽‍💻 𝔸𝕜𝕒𝕤𝕙 𝕐𝕒𝕕𝕒𝕧
-    </footer>
-    
+    <script>
+        $(document).ready(function(){
+            $('.owl-carousel').owlCarousel({
+                items: 4,
+                margin: 20,
+              /*  loop: true,
+                nav:true,
+                mouseDrag:true,
+                stagePadding: 50,
+                autoplay:true,
+                autoplayTimeout:2000, */
+                animateOut: 'slideOutDown',
+                animateIn: 'flipInX',
+                responsive:{
+                    0:{
+                        items:1,
+                        nav:true
+                    },
+                    600:{
+                        items:3,
+                        nav:false
+                    },
+                    1000:{
+                        items:5,
+                        nav:true,
+                        loop:false
+                    }
+                }
+            })
+   
+        })
+        
+    </script>
 </body>
 </html>
